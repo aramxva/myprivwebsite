@@ -1,15 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 
-
-
-
-
-
-
-
-
-
 *{
     margin: 0;
     padding: 0;
@@ -40,7 +31,9 @@ a{
     background-size: cover;
 }
 nav{
+    position: sticky;
     display: flex;
+    
     align-items: center;
     justify-content: space-between;
     padding: 30px 100px;
@@ -62,11 +55,12 @@ nav ul li a{
     color: #EDE6DB;
     position: relative; 
     padding: 5px 0;
-    font-family: cursive;
+    font-family: Ubuntu;
 }
 nav ul li a:hover{
     color: #417D7A;
 }
+
 nav ul li a:after{
     content: "";
     position: absolute;
@@ -104,7 +98,6 @@ nav ul li a:hover:after{
     position: absolute;
     top: 35%;
     left: 8%; 
-    font-family: cursive;
 }
 .spotify{
     position: absolute;
@@ -121,17 +114,18 @@ top: 25%;
 right: 9%;
 font-family: cursive;
 }
-.content .title{
+ .title{
+    position: absolute;
+    top: 37px;
+    margin-left: 20px;
     color: #EDE6DB;
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 4px;
-    display: inline-block;
-    margin-bottom: 20px;
-    background: linear-gradient(120deg, #1c99fe 20.69%, #7644ff 50.19%,#ffb774 79.69%);
+    float: left;
+  background: linear-gradient(120deg, #1c99fe 20.69%, #7644ff 50.19%,#ffb774 79.69%);
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent;
-    font-family: cursive;
 }
 .content h1{
     color: #417D7A;
@@ -140,13 +134,16 @@ font-family: cursive;
     line-height: 90px;
     text-transform: inherit;
     width: 70%;
-    font-family: cursive;
+}
+.content{
+    width: 800px;
 }
 
-.content h1 span{
+.content  span{
     color: whitesmoke;
-    font-family: cursive;
+   
 }
+
 
 .img5 {
     
@@ -179,6 +176,77 @@ animation: fade-in 1s ease-in;
     100%{
         opacity: 1;
     }
-}
+} 
+@media only screen and (max-width: 700px) 
+{
+    nav{
+        position: sticky;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4px ;
+        padding-left: 46px
+    }
+    .logo{
+    top: 69px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100px;
+    border-radius: 1000px;
+     }
+     .title{
+      position: absolute;
+      margin-left: 150px;
+      top: 176px;
+       
+     }
+     nav ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 10px 24px;
+    }
+    .spotify{
+        position: absolute;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 210px;
+        height: 260px;
+        top: 60%;
+        left: 89px; 
+    }
+    .pspotify{  
+        padding: 15px 104px 50px;
+        font-size: 15px;
+        top: 55%;
+    }
+    .content{
+        position: absolute;
+        top: 25%;
+        left: 120px; 
+        width: 220px;
+    }
+    .content h1{
 
+       
+        font-size: 40px;
+        
+    }
+    .content span{
 
+       
+        font-size: 20px;
+        
+    }
+    .content p{
+        font-size: 12px;
+       
+        margin-left: 12px;
+        
+    }
+   
+    
+};
+
+ 
